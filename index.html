@@ -4,7 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pelota que rebota</title>
+    <style>
+      /* Reset: sin márgenes ni relleno, para que no quede borde blanco. */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      canvas {
+        display: block;
+      }
+      /* El título solo identifica el proyecto: discreto, en una esquina. */
+      h1 {
+        position: fixed;
+        top: 12px;
+        left: 14px;
+        margin: 0;
+        color: #fff;
+        opacity: 0.4;
+        font: 600 14px/1 sans-serif;
+        letter-spacing: 0.5px;
+        pointer-events: none;
+      }
+    </style>
+    <!-- p5.js debe cargarse antes que p5.sound, y ambos antes de sketch.js -->
     <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
     <script src="sketch.js"></script>
   </head>
   <body>
